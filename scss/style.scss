@@ -1,0 +1,247 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+main {
+    padding: 5px 5px;
+}
+
+main .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container .head {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+.head p {
+    font-family: $raleway;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $silver;
+    margin-bottom: 15px;
+}
+
+.head h1 {
+    font-family: $roboto;
+    text-align: center;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: $yellow;
+    margin-bottom: 40px;
+}
+
+.head svg {
+    width: 100%;
+    height: 20px;
+}
+
+main .container .slider {
+    max-width: 1030px;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider .photo {
+    max-width: 515px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid $yellow;
+    padding: 80px 85px 80px 0;
+}
+
+.slider .photo img {
+    max-width: 430px;
+    max-height: 430px;
+}
+
+.slider .intro {
+    max-width: 515px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5px 20px 85px;
+}
+
+.intro .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.info h2 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: $darkSilver;
+    margin-bottom: 30px;
+}
+
+.info .fake-line {
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: $yellow;
+    margin-bottom: 30px;
+}
+
+.info h3 {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $darkSilver;
+}
+
+.intro ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 49px;
+}
+
+.intro ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $whiteSilver;
+    border-radius: 50%;
+}
+
+.intro ul li:not(:last-child) {
+    margin-right: 5px;
+}
+
+.intro ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro ul li a svg {
+    fill: $whiteSilver;
+}
+
+.intro ul li:hover a svg {
+    fill: $yellow
+}
+
+.intro ul li a .icon-facebook {
+    width: 6.5px;
+    height: 12px
+}
+.intro ul li a .icon-twitter {
+    width: 14px;
+    height: 12px
+}
+.intro ul li a .icon-google {
+    width: 19.2px;
+    height: 12px
+}
+.intro ul li a .icon-linkedin {
+    width: 12px;
+    height: 12px
+}
+
+.intro p {
+    max-width: 430px;
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: $blackSilver;
+    margin-bottom: 20px;
+}
+
+.intro .icon-decore {
+    width: 50px;
+    height: 4px;
+    margin-bottom: 25px;
+}
+
+.intro .button {
+    width: 118px;
+    min-height: 24px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid $yellow;
+    font-family: $openSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $darkSilver;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    main .container .head {
+        margin-bottom: 20px;
+    }
+    
+    .head h1 {
+        font-size: 40px;
+    }
+    
+    .slider .photo {
+        justify-content: center;
+        border-bottom: 1px solid $yellow;
+        border-right: none;
+        padding: 40px 5px;
+    }
+
+    main .container .slider {
+        flex-direction: column;
+    }
+
+    .slider .photo img {
+        max-width: 340px;
+    }
+
+    .slider .intro {
+        padding: 20px 5px;
+    }
+
+    .intro ul {
+        margin-bottom: 25px;
+    }
+    
+}
