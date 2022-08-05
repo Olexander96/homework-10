@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" 
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
@@ -13,62 +15,67 @@
 </head>
 <body>
     <main>
-        <section class="container">
-            <div class="head">
-                <p>The geniuses behind our work</p>
-                <h1>Our team</h1>
-                <svg class="icon-divider">
-                    <use xlink:href="img/sprite.svg#divider-head"></use>
-                </svg>
-            </div>
-            <div class="slider">
-                <div class="slider__photo">
-                    <img src="img/person-photo.png" alt="person-photo">
-                </div>
-                <div class="slider__intro">
-                    <div class="slider__info">
-                        <h2>Sahariar Kabir</h2>
-                        <div class="slider__fake"></div>
-                        <h3>Frontend Developer</h3>
+        <section class="team">
+            <div class="container">
+                <div class="title">
+                    <p>The geniuses behind our work</p>
+                    <h1>Our team</h1>
+                    <div class="icon-divider">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#divider-head"></use>
+                        </svg>
                     </div>
-                    <ul class="social">
-                        <li class="social__item">
-                            <a href="#">
-                                <svg class="icon-facebook">
-                                    <use xlink:href="img/sprite.svg#facebook-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#">
-                                <svg class="icon-twitter">
-                                    <use xlink:href="img/sprite.svg#twitter-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#">
-                                <svg class="icon-google">
-                                    <use xlink:href="img/sprite.svg#google-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#">
-                                <svg class="icon-linkedin">
-                                    <use xlink:href="img/sprite.svg#linkedin-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula 
-                        efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod 
-                        lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan 
-                        mauris ut, consectetur.</p>
-                    <svg class="slider__decore">
-                        <use xlink:href="img/sprite.svg#info-decore"></use>
-                    </svg>
-                    <button class="slider__button">view profile</button>
+                </div>
+                <div class="person">
+                    <div class="person__photo">
+                        <div class="border-decore">
+                            <img src="img/person-photo1.png" alt="Sahariar Kabir">
+                        </div>
+                    </div>
+                    <div class="person__intro">
+                        <div class="person__info">
+                            <h2>Sahariar Kabir</h2>
+                            <h3>Frontend Developer</h3>
+                        </div>
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#">
+                                    <svg class="icon-facebook">
+                                        <use xlink:href="img/sprite.svg#facebook-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#">
+                                    <svg class="icon-twitter">
+                                        <use xlink:href="img/sprite.svg#twitter-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#">
+                                    <svg class="icon-google">
+                                        <use xlink:href="img/sprite.svg#google-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#">
+                                    <svg class="icon-linkedin">
+                                        <use xlink:href="img/sprite.svg#linkedin-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="person__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula 
+                            efficitur, sit amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod 
+                            lacus placerat. Praesent rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan 
+                            mauris ut, consectetur.</p>
+                        <div class="person__decore">
+                            <span></span>
+                        </div>
+                        <a class="person__link" href="#">view profile</a>
+                    </div>
                 </div>
             </div>
         </section>

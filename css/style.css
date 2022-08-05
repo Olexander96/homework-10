@@ -10,15 +10,14 @@ main {
 main .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: centers;
   align-items: center;
 }
 
-.head {
-  max-width: 460px;
+.title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +26,7 @@ main .container {
   margin-bottom: 40px;
 }
 
-.head p {
+.title p {
   font-family: "Raleway", "Arial", sans-serif;
   text-align: center;
   font-style: normal;
@@ -39,7 +38,7 @@ main .container {
   margin-bottom: 15px;
 }
 
-.head h1 {
+.title h1 {
   font-family: "Roboto", "Arial", sans-serif;
   text-align: center;
   font-style: normal;
@@ -50,33 +49,58 @@ main .container {
   margin-bottom: 40px;
 }
 
-.head svg {
-  width: 100%;
-  height: 20px;
+.title .icon-divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-main .container .slider {
+.title .icon-divider svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.icon-divider::before, .icon-divider::after {
+  content: "";
+  display: inline-block;
+  width: 210px;
+  height: 1px;
+  background-color: #FFCC00;
+}
+
+main .container .person {
   max-width: 1030px;
   display: flex;
   flex-direction: row;
 }
 
-.slider__photo {
-  max-width: 515px;
+.person__photo {
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   border-right: 1px solid #FFCC00;
-  padding: 80px 85px 80px 0;
+  padding: 65px 85px 65px 0;
 }
 
-.slider__photo img {
+.person__photo .border-decore {
   max-width: 430px;
   max-height: 430px;
+  padding: 15px;
+  background: linear-gradient(to right, #FFCC00 25%, #FFCC00 25%, transparent 0%, transparent 75%, #FFCC00 0%), linear-gradient(to right, #FFCC00 25%, #FFCC00 25%, transparent 0%, transparent 75%, #FFCC00 0%), linear-gradient(to bottom, #FFCC00 25%, #FFCC00 25%, transparent 0%, transparent 75%, #FFCC00 0%), linear-gradient(to bottom, #FFCC00 25%, #FFCC00 25%, transparent 0%, transparent 75%, #FFCC00 0%);
+  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: no-repeat;
 }
 
-.slider__intro {
-  max-width: 515px;
+.border-decore img {
+  width: 100%;
+  height: 100%;
+}
+
+.person__intro {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,7 +108,7 @@ main .container .slider {
   padding: 20px 5px 20px 85px;
 }
 
-.slider__info {
+.person__info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +116,7 @@ main .container .slider {
   margin-bottom: 30px;
 }
 
-.slider__info h2 {
+.person__info h2 {
   font-family: "Roboto", "Arial", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -102,15 +126,17 @@ main .container .slider {
   margin-bottom: 30px;
 }
 
-.slider__fake {
+.person__info h2::after {
+  content: "";
   display: block;
+  margin: 0 auto;
   width: 100px;
   height: 1px;
   background-color: #FFCC00;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-.slider__info h3 {
+.person__info h3 {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -179,7 +205,7 @@ main .container .slider {
   height: 12px;
 }
 
-.slider__text {
+.person__text {
   max-width: 430px;
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -191,13 +217,30 @@ main .container .slider {
   margin-bottom: 20px;
 }
 
-.slider__decore {
-  width: 50px;
-  height: 4px;
+.person__decore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-bottom: 25px;
 }
 
-.slider__button {
+.person__decore span {
+  display: block;
+  width: 20px;
+  height: 4px;
+  margin: 0 5px;
+  background-color: #FFCC00;
+}
+
+.person__decore::before, .person__decore::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 4px;
+  background-color: #FFCC00;
+}
+
+.person__link {
   width: 118px;
   min-height: 24px;
   padding: 5px;
@@ -207,34 +250,42 @@ main .container .slider {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 14px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: #666666;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 992px) {
-  .head {
+  .title {
     margin-bottom: 20px;
   }
-  .head h1 {
+  .title h1 {
     font-size: 40px;
   }
-  .slider__photo {
+  .icon-divider::before, .icon-divider::after {
+    width: 105px;
+  }
+  main .container .person {
+    flex-direction: column;
+  }
+  .person__photo {
+    width: 100%;
     justify-content: center;
     border-bottom: 1px solid #FFCC00;
     border-right: none;
-    padding: 40px 5px;
+    padding: 30px 5px;
   }
-  main .container .slider {
-    flex-direction: column;
+  .border-decore {
+    max-width: 300px;
   }
-  .slider__photo img {
-    max-width: 340px;
-  }
-  .slider__intro {
+  .person__intro {
+    width: 100%;
     padding: 20px 5px;
+  }
+  .person__info {
+    margin-bottom: 15px;
   }
   .social {
     margin-bottom: 25px;
