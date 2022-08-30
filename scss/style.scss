@@ -1,0 +1,318 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+main {
+    padding: 5px 5px;
+}
+
+main .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: centers;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+
+.title p {
+    font-family: $raleway;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $silver;
+    margin-bottom: 15px;
+}
+
+.title h1 {
+    font-family: $roboto;
+    text-align: center;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: $yellow;
+    margin-bottom: 40px;
+}
+
+.title .icon-divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title .icon-divider svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+.icon-divider::before, .icon-divider::after {
+    content: "";
+    display: inline-block;
+    width: 210px;
+    height: 1px;
+    background-color: $yellow;
+  }
+
+main .container .person {
+    max-width: 1030px;
+    display: flex;
+    flex-direction: row;
+}
+
+.person__photo {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid $yellow;
+    padding: 65px 85px 65px 0;
+}
+
+.person__photo .border-decore { 
+    max-width: 430px;
+    max-height: 430px;
+    padding: 15px;
+    background: 
+            linear-gradient(to right, $yellow 25%, $yellow 25%, transparent 0%, transparent 75%, $yellow 0%),
+            linear-gradient(to right, $yellow 25%, $yellow 25%, transparent 0%, transparent 75%, $yellow 0%),
+            linear-gradient(to bottom, $yellow 25%, $yellow 25%, transparent 0%, transparent 75%, $yellow 0%,),
+            linear-gradient(to bottom, $yellow 25%, $yellow 25%, transparent 0%, transparent 75%, $yellow 0%);
+    background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    background-repeat: no-repeat;
+
+}
+
+.border-decore img {
+    width: 100%;
+    height: 100%;
+}
+
+.person__intro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5px 20px 85px;
+}
+
+.person__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.person__info h2 {
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: $darkSilver;
+    margin-bottom: 30px;
+}
+
+.person__info h2::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 1px;
+    background-color: $yellow;
+    margin-top: 30px;
+}
+
+.person__info h3 {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: capitalize;
+    color: $darkSilver;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 49px;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $whiteSilver;
+    border-radius: 50%;
+}
+
+.social__item:not(:last-child) {
+    margin-right: 5px;
+}
+
+.social__item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__item a svg {
+    fill: $whiteSilver;
+}
+
+.social__item:hover a svg {
+    fill: $yellow
+}
+
+.icon-facebook {
+    width: 6.5px;
+    height: 12px
+}
+.icon-twitter {
+    width: 14px;
+    height: 12px
+}
+.icon-google {
+    width: 19.2px;
+    height: 12px
+}
+.icon-linkedin {
+    width: 12px;
+    height: 12px
+}
+
+.person__text {
+    max-width: 430px;
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: $blackSilver;
+    margin-bottom: 20px;
+}
+
+.person__decore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.person__decore span {
+    display: block;
+    width: 20px;
+    height: 4px;
+    margin: 0 5px;
+    background-color: $yellow;
+}
+
+.person__decore::before, .person__decore::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 4px;
+    background-color: $yellow;
+}
+
+
+.person__link {
+    width: 118px;
+    min-height: 24px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid $yellow;
+    font-family: $openSans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $darkSilver;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    .title {
+        margin-bottom: 20px;
+    }
+    
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .icon-divider::before, .icon-divider::after {
+        width: 105px;
+    }
+    
+    main .container .person {
+        flex-direction: column;
+    }
+
+    .person__photo {
+        width: 100%;
+        justify-content: center;
+        border-bottom: 1px solid $yellow;
+        border-right: none;
+        padding: 30px 5px;
+    }
+
+    .border-decore {
+        max-width: 300px;
+    }
+
+    .person__intro {
+        width: 100%;
+        padding: 20px 5px;
+    }
+
+    .person__info {
+        margin-bottom: 15px;
+    }
+
+    .social {
+        margin-bottom: 25px;
+    }
+    
+}
